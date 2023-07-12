@@ -1,0 +1,114 @@
+
+  
+.product-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+    margin-top: 100px;
+
+  }
+  
+  .product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .product-image::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-circles);
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .product-image::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    bottom: -90px;
+    left: -90px;
+    background-color: var(--bg-circles);
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+  
+  .product-image img {
+    width: 280px;
+    height: 210px;
+    margin: 40px 0;
+    object-fit: contain;
+    transform: translateY(15px);
+    transition: var(--transition);
+  }
+  
+  .product-details {
+    background-color: #27293d;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 25px;
+    flex: 1;
+  }
+  
+  .product-details h3 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: var(--transition);
+    top: 0;
+  }
+  
+  .product-details p {
+    margin-bottom: 20px;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .add-to-cart {
+    background-color: #1a1c33;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .add-to-cart:hover {
+    background-color: #343654;
+  }
+  
+  .product-detail-container:hover .product-image::before {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .product-detail-container:hover .product-image::after {
+    bottom: -35px;
+    left: -35px;
+  }
+  
+  .product-detail-container:hover .product-image img {
+    transform: translateY(-20px) scale(0.9);
+  }
+  
+  .product-detail-container:hover .product-details h3 {
+    color: whitesmoke;
+    font-weight: normal;
+    font-size: 24px;
+    top: -25px;
+  }
+  
